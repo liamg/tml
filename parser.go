@@ -23,12 +23,12 @@ type parserState struct {
 type attrs uint8
 
 const (
-	Bold      uint8 = 1
-	Dim             = 2
-	Underline       = 4
-	Blink           = 8
-	Reverse         = 16
-	Hidden          = 32
+	bold      uint8 = 1
+	dim             = 2
+	underline       = 4
+	blink           = 8
+	reverse         = 16
+	hidden          = 32
 )
 
 var resetAll = "\x1b[0m"
@@ -36,12 +36,12 @@ var resetFg = "\x1b[39m"
 var resetBg = "\x1b[49m"
 
 var attrMap = map[uint8]string{
-	Bold:      "\x1b[1m",
-	Dim:       "\x1b[2m",
-	Underline: "\x1b[4m",
-	Blink:     "\x1b[5m",
-	Reverse:   "\x1b[7m",
-	Hidden:    "\x1b[8m",
+	bold:      "\x1b[1m",
+	dim:       "\x1b[2m",
+	underline: "\x1b[4m",
+	blink:     "\x1b[5m",
+	reverse:   "\x1b[7m",
+	hidden:    "\x1b[8m",
 }
 
 func (s *parserState) setFg(esc string) string {
