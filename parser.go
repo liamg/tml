@@ -29,6 +29,7 @@ const (
 	blink
 	reverse
 	hidden
+	italic
 )
 
 var resetAll = "\x1b[0m"
@@ -38,6 +39,7 @@ var resetBg = "\x1b[49m"
 var attrMap = map[uint8]string{
 	bold:      "\x1b[1m",
 	dim:       "\x1b[2m",
+	italic:    "\x1b[3m",
 	underline: "\x1b[4m",
 	blink:     "\x1b[5m",
 	reverse:   "\x1b[7m",
