@@ -39,11 +39,12 @@ var bgTags = map[string]string{
 }
 
 var attrTags = map[string]uint8{
-	"bold":      bold,
-	"dim":       dim,
-	"italic":    italic,
-	"underline": underline,
-	"blink":     blink,
-	"reverse":   reverse,
-	"hidden":    hidden,
+	"bold":          bold,
+	"dim":           dim,
+	"italic":        italic,
+	"underline":     underline,
+	"blink":         blink,
+	"reverse":       reverse,
+	"hidden":        hidden,
+	"strikethrough": strikethrough,
 }

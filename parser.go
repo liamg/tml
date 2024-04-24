@@ -30,6 +30,7 @@ const (
 	reverse
 	hidden
 	italic
+	strikethrough
 )
 
 var resetAll = "\x1b[0m"
@@ -37,13 +38,14 @@ var resetFg = "\x1b[39m"
 var resetBg = "\x1b[49m"
 
 var attrMap = map[uint8]string{
-	bold:      "\x1b[1m",
-	dim:       "\x1b[2m",
-	italic:    "\x1b[3m",
-	underline: "\x1b[4m",
-	blink:     "\x1b[5m",
-	reverse:   "\x1b[7m",
-	hidden:    "\x1b[8m",
+	bold:          "\x1b[1m",
+	dim:           "\x1b[2m",
+	italic:        "\x1b[3m",
+	underline:     "\x1b[4m",
+	blink:         "\x1b[5m",
+	reverse:       "\x1b[7m",
+	hidden:        "\x1b[8m",
+	strikethrough: "\x1b[9m",
 }
 
 func (s *parserState) setFg(esc string) string {
